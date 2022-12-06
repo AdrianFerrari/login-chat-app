@@ -11,3 +11,8 @@ Technologies used:
 - JWT for authorization and authentication
 
 It implement CRUD methods for the user account and the comments posted by them.
+
+## Screenshots
+
+![](./screenshot/Screenshot1.png)
+![](./screenshot/Screenshot2.png)
