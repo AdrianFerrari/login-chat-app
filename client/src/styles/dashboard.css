@@ -1,0 +1,58 @@
+.dash-board {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    gap: .3em;
+}
+
+.dash-board h1 {
+    font-size: 1.3em;
+}
+
+.dash-board form {
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+}
+
+.dash-board textarea {
+    min-height: 100px;
+}
+
+.dash-board button {
+    width: 80px;
+    font-size: .8em;
+    align-self: center;
+    cursor: pointer;
+}
+
+.dash-options {
+    font-size: .7em;
+    color: rgb(0, 0, 116);
+}
+
+.dash-options span {
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+.option-window {
+    display: flex;
+    flex-direction: column;
+    font-size: .9em;
+}
+
+.option-window button {
+    font-size: .9em;
+    margin-top: .3em;
+}
+
+.offscreen {
+    display: hidden;
+}
+
+.errMsg {
+    color: red;
+    font-size: .8em;
+}

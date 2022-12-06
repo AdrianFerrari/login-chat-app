@@ -1,0 +1,22 @@
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+    margin: 1em;
+    min-height: 380px;
+}
+
+.outlet {
+    border-radius: 5px;
+    padding: 1em;
+    background-color: white;
+    min-width: 320px;
+    box-shadow: 1px 2px 6px rgb(114, 114, 114);
+}
+
+@media (max-width: 845px) {
+    .home {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,54 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.login h2 {
+    font-size: 1.2em;
+}
+
+.user-form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.user-form button {
+    margin-top: .6rem;
+    border-radius: 5px;
+    padding: .2em 0;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.user-form input {
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.user-form label {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-link {
+    margin-top: .5rem;
+}
+
+.signup-link button {
+    border: none;
+    font-size: 1em;
+    color: blue;
+    text-decoration: underline;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.offscreen {
+    display: hidden;
+}
+
+.errMsg {
+    color: red;
+}

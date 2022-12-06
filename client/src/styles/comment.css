@@ -1,0 +1,85 @@
+.comments-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    padding: 1em;
+    gap: .5rem;
+    width: 320px;
+    box-shadow: 1px 2px 6px rgb(114, 114, 114);
+}
+
+.comments-container h1 {
+    font-size: 1.3em;
+}
+
+.comment {
+    background-color: white;
+    padding-left: .3em;
+    border: 1px solid black;
+    box-shadow: 3px 3px black;
+    
+    /* overflow: hidden; */
+}
+
+.comment:focus-within {
+    border: 1px solid blue;
+    box-shadow: 3px 3px blue;
+}
+
+.comment .user-name {
+    font-size: .8em;
+    color: rgb(0, 0, 116);
+}
+
+.comment p {
+    font-size: .8em;
+}
+
+.comment-array {
+    display: flex;
+    flex-direction: column;
+    gap: .8em;
+    /* background-color: rgb(221, 221, 221);
+    padding: .2em; */
+}
+
+/*editable-comments*/
+
+#current-user-h2 {
+    color: rgb(71, 71, 255);
+    font-size: .8em;
+}
+
+.change-comment {
+    display: flex;
+    color: grey;
+    gap: 10px;
+}
+
+.change-comment span {
+    cursor: pointer;
+    font-size: .8em;
+    margin: 2px 0;
+}
+
+.change-comment span:hover,
+.change-comment span:active {
+    color: rgb(206, 206, 206);
+}
+
+.comment-input {
+    background-color: rgba(239, 239, 239, 0.3);
+    border: none;
+    font-size: .8em;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 3px 0;
+    resize: vertical;
+    overflow: hidden;
+    width: 100%;
+}
+
+.comment-input:disabled {
+    background-color:white;
+}

@@ -1,0 +1,14 @@
+.App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+    min-height: 100vh;
+    background-image: url("../images/bg-white-lines.png");
+}
+
+@media (max-width: 675px) {
+    .App {
+        min-height: auto;
+    }
+}
