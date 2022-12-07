@@ -9,9 +9,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js",
-    "client": "npm start --prefix client",
-    "build": "npm run build --omit=dev"
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
