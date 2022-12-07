@@ -36,8 +36,7 @@ export function UserProvider({ children }) {
 
     async function editUserComment(comment) {
         const response = await editComment(comment, accessToken);
-        if (!response?.success) return console.log(response);
-        //getUsersArray();
+        if (!response?.success) return
         const newusers = users.map(user => {
             return {
                 ...user,
@@ -49,8 +48,7 @@ export function UserProvider({ children }) {
 
     async function deleteUserComment(comment) {
         const response = await deleteComment(comment, accessToken);
-        if (!response?.success) return console.log(response);
-        //getUsersArray();
+        if (!response?.success) return
         const newusers = users.map(user => {
             return {
                 ...user,
@@ -65,7 +63,7 @@ export function UserProvider({ children }) {
             { userName: currentUser.userName },
             accessToken
         );
-        if (!response?.success) return console.log(response);
+        if (!response?.success) return
         getUsersArray();
     }
 

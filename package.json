@@ -4,17 +4,21 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "engines": {
+    "node": "18.10.0"
+  },
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
     "client": "npm start --prefix client",
-    "build": "npm run build"
+    "build": "NODE_ENV=production npm build --omit=dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "compression": "^1.7.4",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",

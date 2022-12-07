@@ -8,6 +8,7 @@ dotenv.config();
 import path from "path"
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import compression from "compression"
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -21,6 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "client", "build")))
+app.use(compression())
 
 //routes
 app.use("/user", userRoutes);
@@ -34,7 +36,7 @@ mongoose
     .then(() => console.log("connected to mongoDB"))
     .catch((error) => console.error(error));
 
-//mongoose.set('sanitizeFilter', true);
+mongoose.set('sanitizeFilter', true);
 
 //port
 app.listen(port, () => console.log(`listening on port: ${port}`));
