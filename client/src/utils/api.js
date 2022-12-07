@@ -2,7 +2,7 @@ import axios from "axios";
 
 const controller = new AbortController();
 const client = axios.create({
-    baseURL: process.env.REACT_APP_BASE_URL,
+    baseURL: process.env.REACT_APP_BASE_URL || "http://localhost:4000",
     withCredentials: true,
     timeout: 5000,
 });
