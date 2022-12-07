@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "engines": {
+    "node": "v18.10.0"
+  },
   "scripts": {
     "start": "node index.js",
     "client": "npm start --prefix client",
