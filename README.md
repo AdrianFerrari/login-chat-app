@@ -1,5 +1,6 @@
 # Sign-Up and Chat App
-Simple app for signup login and posting comments on a thread.
+Simple app for signup login and posting comments on a thread.  
+Link to website: https://login-chat-app-production.up.railway.app/  
 Technologies used:
 - ReactJS
     - useContext
