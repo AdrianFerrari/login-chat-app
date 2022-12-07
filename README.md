@@ -1,4 +1,4 @@
-# Sign-Up Component
+# Sign-Up and Chat App
 Simple app for signup login and posting comments on a thread.
 Technologies used:
 - ReactJS

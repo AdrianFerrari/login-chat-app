@@ -1,6 +1,6 @@
 {
-  "short_name": "Login App",
-  "name": "Login and Chat app",
+  "short_name": "Sign-up App",
+  "name": "Sign-Up and Chat App",
   "icons": [
     {
       "src": "chat.ico",

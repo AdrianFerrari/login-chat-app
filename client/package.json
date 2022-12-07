@@ -1,6 +1,6 @@
 {
-  "name": "login-sigin-component",
-  "version": "0.1.0",
+  "name": "sign-up-and-chat",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

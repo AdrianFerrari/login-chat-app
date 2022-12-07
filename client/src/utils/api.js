@@ -1,8 +1,8 @@
 import axios from "axios";
-const controller = new AbortController();
 
+const controller = new AbortController();
 const client = axios.create({
-    baseURL: "http://localhost:4000",
+    baseURL: process.env.REACT_APP_BASE_URL,
     withCredentials: true,
     timeout: 5000,
 });
@@ -20,11 +20,6 @@ export async function getUsers() {
 
 export async function getUser(accessToken) {
     try {
-        /* const config = {
-            headers: {
-                authorization: "Bearer " + accessToken,
-            },
-        }; */
         const response = await client.get("/", {
             headers: { authorization: "Bearer " + accessToken },
             signal: controller.signal,
@@ -77,9 +72,7 @@ export async function postComment(data) {
 
 export async function refreshAccessToken() {
     try {
-        const response = await client.get("/user/refresh", {
-            withCredentials: true,
-        });
+        const response = await client.get("/user/refresh");
         return response.data;
     } catch (error) {
         return error.response.data;
@@ -88,9 +81,7 @@ export async function refreshAccessToken() {
 
 export async function logoutUser() {
     try {
-        const response = await client.get("/user/logout", {
-            withCredentials: true,
-        });
+        const response = await client.get("/user/logout");
         return response.data;
     } catch (error) {
         return error.response.data;
