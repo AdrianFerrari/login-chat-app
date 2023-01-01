@@ -95,7 +95,7 @@ const handleLogin = async (req, res) => {
         delete user._doc.refreshToken;
         res.cookie("jwt", refreshToken, {
             httpOnly: true,
-            sameSite: "None",
+            sameSite: "lax",
             secure: true,
             maxAge: 24 * 60 * 60 * 1000,
         });
