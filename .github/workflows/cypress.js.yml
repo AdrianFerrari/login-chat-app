@@ -9,13 +9,12 @@ jobs:
 
       - name: Cypress run with env
         uses: cypress-io/github-action@v5
+        with:
+          browser: chrome
+          build: npm run build
+          start: npm start
         env:
           CYPRESS_REACT_APP_BASE_URL: ${{ secrets.CYPRESS_REACT_APP_BASE_URL }}
           CYPRESS_ACCESS_TOKEN_SECRET: ${{ secrets.CYPRESS_ACCESS_TOKEN_SECRET }}
           CYPRESS_MONGODB_URI: ${{ secrets.CYPRESS_MONGODB_URI }}
           CYPRESS_REFRESH_TOKEN_SECRET: ${{ secrets.CYPRESS_REFRESH_REFRESH_TOKEN_SECRET }}
-        with:
-          browser: chrome
-          build: npm run build
-          start: npm start
-        
