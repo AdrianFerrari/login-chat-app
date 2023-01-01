@@ -13,8 +13,8 @@ jobs:
           browser: chrome
           build: npm run build
           start: npm start
-        env:
-          CYPRESS_REACT_APP_BASE_URL: http://localhost:4000/
-          CYPRESS_ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
-          CYPRESS_MONGODB_URI: ${{ secrets.MONGODB_URI }}
-          CYPRESS_REFRESH_TOKEN_SECRET: ${{ secrets.REFRESH_TOKEN_SECRET }}
+        #env:
+          #CYPRESS_REACT_APP_BASE_URL: http://localhost:4000/
+          #CYPRESS_ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
+          #CYPRESS_MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          #CYPRESS_REFRESH_TOKEN_SECRET: ${{ secrets.REFRESH_TOKEN_SECRET }}
