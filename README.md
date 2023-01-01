@@ -10,6 +10,7 @@ Technologies used:
 - express
 - mogoose
 - JWT for authorization and authentication
+- Cypress for CI testing
 
 It implement CRUD methods for the user account and the comments posted by them.
 
