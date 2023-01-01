@@ -5,10 +5,16 @@ import "../styles/home.css"
 function Home() {
     return (
         <div className="home">
-            <div className="outlet">
-                <Outlet />
+            <div className="home-body">
+                <div className="outlet">
+                    <Outlet />
+                </div>
+                <Comments />
             </div>
-            <Comments />
+            <div className="footer">
+                <p>Made by Adrian Ferrari. <a href="https://github.com/AdrianFerrari/login-chat-app">Github Source</a></p>
+                <p>Email me at: <a href="mailto:sdadrian@gmail.com">sdadrian@gmail.com</a></p>
+            </div>
         </div>
     )
 }

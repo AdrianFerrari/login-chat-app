@@ -1,5 +1,9 @@
 .home {
     display: flex;
+    flex-direction: column;
+}
+.home-body {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 1em;
@@ -13,6 +17,10 @@
     background-color: white;
     min-width: 320px;
     box-shadow: 1px 2px 6px rgb(114, 114, 114);
+}
+
+.footer {
+    margin: auto;
 }
 
 @media (max-width: 845px) {
