@@ -16,7 +16,7 @@ const __dirname = dirname(__filename);
 const app = express();
 const port = process.env.PORT || 4000;
 
-//middleware
+//middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
