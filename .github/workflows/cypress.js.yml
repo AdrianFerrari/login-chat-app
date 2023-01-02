@@ -16,8 +16,8 @@ jobs:
           wait-on: 'http://localhost:4000'
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          CYPRESS_REACT_APP_BASE_URL: ${{ secrets.CYPRESS_REACT_APP_BASE_URL }}
-          CYPRESS_ACCESS_TOKEN_SECRET: ${{ secrets.CYPRESS_ACCESS_TOKEN_SECRET }}
-          CYPRESS_MONGODB_URI: ${{ secrets.CYPRESS_MONGODB_URI }}
-          CYPRESS_REFRESH_TOKEN_SECRET: ${{ secrets.CYPRESS_REFRESH_TOKEN_SECRET }}
+          REACT_APP_BASE_URL: ${{ secrets.CYPRESS_REACT_APP_BASE_URL }}
+          ACCESS_TOKEN_SECRET: ${{ secrets.CYPRESS_ACCESS_TOKEN_SECRET }}
+          MONGODB_URI: ${{ secrets.CYPRESS_MONGODB_URI }}
+          REFRESH_TOKEN_SECRET: ${{ secrets.CYPRESS_REFRESH_TOKEN_SECRET }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
