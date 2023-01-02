@@ -5,19 +5,20 @@ const password = "testuserpassword567"
 
 describe("signup", () => {
     it("signup", () => {
-        Cypress.Cookies.debug(true, {verbose:true})
-        cy.clearCookies()
+        Cypress.Cookies.debug(true)
         cy.signup(user, password)
-        cy.visit("/")
         cy.url().should('contain', '/dashboard')
         cy.contains(`Hi ${user}`).should("be.visible")
+        cy.getCookie("jwt").its("value").should("not.be.empty")
     })
+
+    
 })
 
 describe("actions", () => {
     beforeEach(() => {
-        Cypress.Cookies.debug(true, {verbose:true})
-        cy.login(user, password)
+        Cypress.Cookies.debug(true)
+        cy.loginSession(user, password)
         cy.visit("/dashboard")
     })
 
@@ -65,13 +66,32 @@ describe("actions", () => {
         cy.getCookie("jwt").its("value").should("be.empty")
     })
 
+    
+
+})
+
+describe("user errors", () => {
+    it("try to signup with a name that already exist", () => {
+        cy.signup(user, password)
+        cy.get(".errMsg").should("have.text", "that name is already used")
+    })
+
+    it("should't be able to log in with a usename that doesn exist", () => {
+        cy.login("testuser123", "12345")
+        cy.get(".errMsg").should("have.text", "no user with that name")
+    })
+
+    it("should't be able to log in with wrong password", () => {
+        cy.login(user, "12345")
+        cy.get(".errMsg").should("have.text", "incorrect password")
+    })
 })
 
 describe("delete accout", () => {
     beforeEach(() => {
         Cypress.session.clearAllSavedSessions()
         Cypress.Cookies.debug(true, {verbose:true})
-        cy.login(user, password)
+        cy.loginSession(user, password)
         cy.visit("/dashboard")
       })
 
