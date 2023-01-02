@@ -3,6 +3,10 @@ on: [push]
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        containers: [1, 2]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -13,8 +17,13 @@ jobs:
           browser: chrome
           build: npm run build
           start: npm start
+          wait-on: 'http://localhost:3000'
+          record: true
+          parallel: true
         env:
-          CYPRESS_REACT_APP_BASE_URL: ${{ secrets.REACT_APP_BASE_URL }}
-          CYPRESS_ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
-          CYPRESS_MONGODB_URI: ${{ secrets.MONGODB_URI }}
-          CYPRESS_REFRESH_TOKEN_SECRET: ${{ secrets.REFRESH_TOKEN_SECRET }}
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          CYPRESS_REACT_APP_BASE_URL: ${{ secrets.CYPRESS_REACT_APP_BASE_URL }}
+          CYPRESS_ACCESS_TOKEN_SECRET: ${{ secrets.CYPRESS_ACCESS_TOKEN_SECRET }}
+          CYPRESS_MONGODB_URI: ${{ secrets.CYPRESS_MONGODB_URI }}
+          CYPRESS_REFRESH_TOKEN_SECRET: ${{ secrets.CYPRESS_REFRESH_TOKEN_SECRET }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
