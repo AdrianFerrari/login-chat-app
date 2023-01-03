@@ -6,9 +6,3 @@
     min-height: 100vh;
     background-image: url("../images/bg-white-lines.png");
 }
-
-@media (max-width: 675px) {
-    .App {
-        min-height: auto;
-    }
-}

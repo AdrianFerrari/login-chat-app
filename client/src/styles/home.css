@@ -24,7 +24,7 @@
 }
 
 @media (max-width: 845px) {
-    .home {
+    .home-body {
         flex-direction: column;
     }
 }
