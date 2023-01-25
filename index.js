@@ -36,7 +36,7 @@ mongoose
     .then(() => console.log("connected to mongoDB"))
     .catch((error) => console.error(error));
 
-mongoose.set('sanitizeFilter', true);
+mongoose.set({sanitizeFilter: true, strictQuery: false});
 
 //port
 app.listen(port, () => console.log(`listening on port: ${port}`));
